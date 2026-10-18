@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="termGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    .code {
+      font-family: 'Fira Code', 'JetBrains Mono', 'Cascadia Code', 'Ubuntu Mono', 'Consolas', monospace;
+      font-size: 13.5px;
+      letter-spacing: 0.3px;
+    }
+    .prompt-user { fill: #38bdf8; font-weight: 700; }
+    .prompt-symbol { fill: #ec4899; font-weight: 700; }
+    .prompt-host { fill: #38bdf8; font-weight: 700; }
+    .prompt-path { fill: #fbbf24; }
+    .prompt-bracket { fill: #64748b; }
+    .cmd { fill: #f8fafc; font-weight: 600; }
+    .cmd-flag { fill: #94a3b8; }
+    .title-name { fill: #ffffff; font-weight: 700; font-size: 15px; }
+    .title-handle { fill: #38bdf8; font-size: 14px; }
+    .separator { fill: #334155; }
+    .label { fill: #38bdf8; font-weight: 600; }
+    .value { fill: #cbd5e1; }
+    .val-highlight { fill: #4ade80; font-weight: 600; }
+    .val-accent { fill: #c084fc; font-weight: 600; }
+    .val-red { fill: #f87171; font-weight: 600; }
+  </style>
+
+  <!-- Terminal Window Background with Shadow -->
+  <rect x="10" y="10" width="800" height="380" rx="12" ry="12" fill="url(#termGrad)" stroke="#1e293b" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <!-- Title Bar -->
+  <path d="M 10 22 C 10 15.37 15.37 10 22 10 L 798 10 C 804.63 10 810 15.37 810 22 L 810 46 L 10 46 Z" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+  <line x1="10" y1="46" x2="810" y2="46" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Window Controls -->
+  <circle cx="34" cy="28" r="6" fill="#ef4444"/>
+  <circle cx="54" cy="28" r="6" fill="#f59e0b"/>
+  <circle cx="74" cy="28" r="6" fill="#10b981"/>
+
+  <!-- Title Text -->
+  <text x="410" y="32" text-anchor="middle" font-family="'Fira Code', monospace" font-size="12" fill="#64748b" font-weight="500">
+    mriboyd@workstation: ~ (neofetch)
+  </text>
+
+  <!-- Prompt Line 1 -->
+  <text x="35" y="76" class="code">
+    <tspan class="prompt-bracket">┌──(</tspan>
+    <tspan class="prompt-user">mriboyd</tspan>
+    <tspan class="prompt-symbol">㉿</tspan>
+    <tspan class="prompt-host">workstation</tspan>
+    <tspan class="prompt-bracket">)-[</tspan>
+    <tspan class="prompt-path">~</tspan>
+    <tspan class="prompt-bracket">]</tspan>
+  </text>
+
+  <!-- Prompt Line 2 (Executed command) -->
+  <text x="35" y="98" class="code">
+    <tspan class="prompt-bracket">└─$ </tspan>
+    <tspan class="cmd">neofetch </tspan>
+    <tspan class="cmd-flag">--engineer</tspan>
+  </text>
+
+  <!-- Systems Vector Emblem (Left Column) -->
+  <g transform="translate(10, 5)">
+    <!-- Tech Accent Circles / Grid Dots -->
+    <circle cx="65" cy="135" r="1.5" fill="#334155"/>
+    <circle cx="175" cy="135" r="1.5" fill="#334155"/>
+    <circle cx="55" cy="245" r="1.5" fill="#334155"/>
+    <circle cx="185" cy="245" r="1.5" fill="#334155"/>
+
+    <!-- Sharp Modern Delta Chevron -->
+    <path d="M 120 120 L 185 235 L 152 235 L 138 208 L 102 208 L 88 235 L 55 235 Z" 
+          fill="url(#logoGrad)" 
+          stroke="#38bdf8" 
+          stroke-width="1" 
+          stroke-linejoin="round"/>
+    
+    <!-- Inner Core Cutout -->
+    <polygon points="120,155 133,188 107,188" fill="#0f172a" stroke="#818cf8" stroke-width="1.2"/>
+    
+    <!-- Center Core Node -->
+    <circle cx="120" cy="177" r="3" fill="#38bdf8"/>
+
+    <!-- Tech Badges -->
+    <text x="120" y="265" text-anchor="middle" font-family="'Fira Code', monospace" font-size="11" fill="#38bdf8" font-weight="700" letter-spacing="2">ARCH // LINUX</text>
+    <text x="120" y="282" text-anchor="middle" font-family="'Fira Code', monospace" font-size="9" fill="#64748b" font-weight="600" letter-spacing="1">BACKEND // AI // CYBERSEC</text>
+  </g>
+
+  <!-- Specs / Fields (Right Column) -->
+  <!-- Header Title -->
+  <text x="235" y="130" class="code">
+    <tspan class="title-name">Dagim Abebe</tspan>
+    <tspan class="title-handle"> (MriBoyd)</tspan>
+  </text>
+  <text x="235" y="146" class="code separator">----------------------------------------------------</text>
+
+  <!-- Spec lines -->
+  <text x="235" y="168" class="code">
+    <tspan class="label">OS:          </tspan>
+    <tspan class="value">Linux (Fedora / Arch / Ubuntu kernel 6.x)</tspan>
+  </text>
+
+  <text x="235" y="190" class="code">
+    <tspan class="label">Host:        </tspan>
+    <tspan class="value">High-Concurrency &amp; Distributed Architecture</tspan>
+  </text>
+
+  <text x="235" y="212" class="code">
+    <tspan class="label">Uptime:      </tspan>
+    <tspan class="val-highlight">24/7 Hacker, Systems Builder &amp; Problem Solver</tspan>
+  </text>
+
+  <text x="235" y="234" class="code">
+    <tspan class="label">Security:    </tspan>
+    <tspan class="value">TryHackMe (</tspan>
+    <tspan class="val-red">@MriBoy</tspan>
+    <tspan class="value">) • SIEM Telemetry &amp; Auditing</tspan>
+  </text>
+
+  <text x="235" y="256" class="code">
+    <tspan class="label">Education:   </tspan>
+    <tspan class="value">American College of Technology (BSc CS '28)</tspan>
+  </text>
+
+  <text x="235" y="278" class="code">
+    <tspan class="label">Focus:       </tspan>
+    <tspan class="val-accent">Low-Latency Systems, Vector DBs &amp; Agent Tooling</tspan>
+  </text>
+
+  <text x="235" y="300" class="code">
+    <tspan class="label">Memory:      </tspan>
+    <tspan class="value">Cache-conscious SoA &amp; Custom Allocator Pools</tspan>
+  </text>
+
+  <text x="235" y="322" class="code">
+    <tspan class="label">Target:      </tspan>
+    <tspan class="val-highlight">Sub-millisecond latency &amp; zero-allocation hot paths</tspan>
+  </text>
+
+  <!-- Color Palette Blocks -->
+  <g transform="translate(235, 342)">
+    <rect x="0" y="0" width="28" height="14" rx="3" fill="#1e293b"/>
+    <rect x="34" y="0" width="28" height="14" rx="3" fill="#ef4444"/>
+    <rect x="68" y="0" width="28" height="14" rx="3" fill="#22c55e"/>
+    <rect x="102" y="0" width="28" height="14" rx="3" fill="#eab308"/>
+    <rect x="136" y="0" width="28" height="14" rx="3" fill="#3b82f6"/>
+    <rect x="170" y="0" width="28" height="14" rx="3" fill="#a855f7"/>
+    <rect x="204" y="0" width="28" height="14" rx="3" fill="#06b6d4"/>
+    <rect x="238" y="0" width="28" height="14" rx="3" fill="#f8fafc"/>
+
+    <!-- Bright row -->
+    <rect x="280" y="0" width="28" height="14" rx="3" fill="#475569"/>
+    <rect x="314" y="0" width="28" height="14" rx="3" fill="#f87171"/>
+    <rect x="348" y="0" width="28" height="14" rx="3" fill="#4ade80"/>
+    <rect x="382" y="0" width="28" height="14" rx="3" fill="#fde047"/>
+    <rect x="416" y="0" width="28" height="14" rx="3" fill="#60a5fa"/>
+    <rect x="450" y="0" width="28" height="14" rx="3" fill="#c084fc"/>
+    <rect x="484" y="0" width="28" height="14" rx="3" fill="#67e8f9"/>
+    <rect x="518" y="0" width="28" height="14" rx="3" fill="#ffffff"/>
+  </g>
+</svg>
