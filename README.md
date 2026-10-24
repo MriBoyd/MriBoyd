@@ -116,7 +116,7 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="left">🤖 <a href="https://github.com/MriBoyd/mcp-discovery-server-v1.2">MCP Tool Discovery & Proxy</a></h3>
+      <h3 align="left">🤖 <a href="https://github.com/MriBoyd/Ansam">Ansam – MCP Tool Discovery & Proxy</a></h3>
       <p><b>Semantic Discovery Layer & Distributed Proxy for Model Context Protocol (MCP)</b></p>
       <ul>
         <li>Centralized registry indexing <b>10,000+ tools</b> across <b>50+ remote MCP servers</b> with <b>sub-200ms p95 search latency</b>.</li>
@@ -126,7 +126,7 @@
       <p>
         <code>Python</code> • <code>Model Context Protocol (MCP)</code> • <code>Qdrant</code> • <code>LangGraph</code> • <code>RAG</code> • <code>FastAPI</code>
       </p>
-      <a href="https://github.com/MriBoyd/mcp-discovery-server-v1.2"><b>View Repository →</b></a>
+      <a href="https://github.com/MriBoyd/Ansam"><b>View Repository →</b></a>
     </td>
     <td width="50%" valign="top">
       <h3 align="left">🔎 <a href="https://github.com/MriBoyd/-FindStuff">FindStuff – Hybrid Search Engine</a></h3>
